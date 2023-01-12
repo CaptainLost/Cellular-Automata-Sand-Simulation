@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5579de19da31c8740b91c4d48a444887, type: 3}
+  m_Name: Sand
+  m_EditorClassIdentifier: 
+  <ParticleName>k__BackingField: Sand
+  <ParticleCategory>k__BackingField: 0
+  <ParticleColor>k__BackingField:
+  - {r: 0.8352941, g: 0.67058825, b: 0.41960785, a: 1}
+  - {r: 0.77254903, g: 0.6156863, b: 0.38431373, a: 1}
+  <ParticleBehaviour>k__BackingField: {fileID: 11400000, guid: 9b8f470a3bcb34c4bbfdb8072eed8e34, type: 2}
