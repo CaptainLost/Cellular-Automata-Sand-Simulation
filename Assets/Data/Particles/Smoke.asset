@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5579de19da31c8740b91c4d48a444887, type: 3}
-  m_Name: Gravel
+  m_Name: Smoke
   m_EditorClassIdentifier: 
-  <ParticleName>k__BackingField: Gravel
-  <ParticleCategory>k__BackingField: 0
+  <ParticleName>k__BackingField: Smoke
+  <ParticleCategory>k__BackingField: 3
   <ParticleColor>k__BackingField:
-  - {r: 0.4528302, g: 0.4250623, b: 0.4250623, a: 1}
-  <ParticleBehaviour>k__BackingField: {fileID: 11400000, guid: 7b55aec067cdedc419792af7e72075a4, type: 2}
+  - {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
+  - {r: 0.348, g: 0.338256, b: 0.338256, a: 1}
+  <ParticleBehaviour>k__BackingField: {fileID: 11400000, guid: c7296e62740a76b419e0624726a7c84c, type: 2}
+  <IsFlammable>k__BackingField: 0

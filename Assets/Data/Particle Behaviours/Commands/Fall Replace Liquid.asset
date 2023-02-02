@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _replaceCommands:
   - ReplacePosition: {x: 0, y: -1}
-    ReplaceCategory: 1
+    ReplaceCategory: 2
+    IfFlammable: 0
   _randomizePick: 0

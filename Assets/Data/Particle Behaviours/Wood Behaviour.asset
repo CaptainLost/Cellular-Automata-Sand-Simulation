@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74c30f1b1385341469a8b64c36d0e50a, type: 3}
-  m_Name: Gravel Behaviour
+  m_Name: Wood Behaviour
   m_EditorClassIdentifier: 
   _moveCommands:
   - {fileID: 11400000, guid: bb470b9a5ff89d748a06352f48a1d91f, type: 2}
-  - {fileID: 11400000, guid: a3d1c50a18e3e2e4d8052e2d39975aac, type: 2}

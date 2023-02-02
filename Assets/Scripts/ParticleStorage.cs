@@ -71,7 +71,7 @@ public class ParticleStorage
         if (data == null)
             return null;
 
-        data.CreateParticle(particleType);
+        data.CreateParticle(particleType, CurrentTick);
         data.OnUpdate(CurrentTick);
 
         OnParticleUpdate?.Invoke(data);
@@ -87,6 +87,19 @@ public class ParticleStorage
         ParticleData data = _storage[posX, posY];
 
         return CreateParticle(data, particleType);
+    }
+
+    public ParticleData ClearParticle(ParticleData data)
+    {
+        if (data == null)
+            return null;
+
+        data.ClearParticle();
+        data.OnUpdate(CurrentTick);
+
+        OnParticleUpdate?.Invoke(data);
+
+        return data;
     }
 
     public ParticleData SwapParticles(ParticleData dataA, ParticleData dataB)

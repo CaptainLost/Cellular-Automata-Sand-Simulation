@@ -8,4 +8,6 @@ public class ParticleSO : ScriptableObject
     [field: SerializeField] public ParticleCategory ParticleCategory { get; private set; }
     [field: SerializeField] public List<Color> ParticleColor { get; private set; }
     [field: SerializeField] public ParticleBehaviourSO ParticleBehaviour { get; private set; }
+
+    [field: SerializeField] public bool IsFlammable { get; private set; }
 }

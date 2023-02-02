@@ -8,6 +8,7 @@ public class ReplaceCommand
 {
     public Vector2Int ReplacePosition;
     public ParticleCategory ReplaceCategory;
+    public bool IfFlammable;
 }
 
 [CreateAssetMenu(fileName = "Replace Command", menuName = "CptLost/Particle Behaviour/Commands/Replace Command")]
@@ -33,7 +34,13 @@ public class ReplaceCategoryCommandSO : ParticleCommandSO
             if (targetData == null)
                 continue;
 
-            if (targetData.IsEmpty() || targetData.ParticleType.ParticleCategory != replaceCommand.ReplaceCategory)
+            if (targetData.IsEmpty())
+                continue;
+
+            if (replaceCommand.ReplaceCategory != ParticleCategory.None && targetData.ParticleType.ParticleCategory != replaceCommand.ReplaceCategory)
+                continue;
+
+            if (replaceCommand.IfFlammable && !targetData.ParticleType.IsFlammable)
                 continue;
 
             particleStorage.SwapParticles(particleData, targetData);

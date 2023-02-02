@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c30f1b1385341469a8b64c36d0e50a, type: 3}
+  m_Name: Smoke Behaviour
+  m_EditorClassIdentifier: 
+  _moveCommands:
+  - {fileID: 11400000, guid: c5003e4e0e4cbbf43abc23e5feac67f5, type: 2}
+  - {fileID: 11400000, guid: a43b6f59b41c55d4fba0b410b3eea09b, type: 2}
+  - {fileID: 11400000, guid: 6acd29335dd0fd24c832ffc69e099a98, type: 2}

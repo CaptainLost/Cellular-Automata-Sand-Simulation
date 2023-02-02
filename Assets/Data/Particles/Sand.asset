@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Sand
   m_EditorClassIdentifier: 
   <ParticleName>k__BackingField: Sand
-  <ParticleCategory>k__BackingField: 0
+  <ParticleCategory>k__BackingField: 1
   <ParticleColor>k__BackingField:
   - {r: 0.8352941, g: 0.67058825, b: 0.41960785, a: 1}
   - {r: 0.77254903, g: 0.6156863, b: 0.38431373, a: 1}
   <ParticleBehaviour>k__BackingField: {fileID: 11400000, guid: 9b8f470a3bcb34c4bbfdb8072eed8e34, type: 2}
+  <IsFlammable>k__BackingField: 0

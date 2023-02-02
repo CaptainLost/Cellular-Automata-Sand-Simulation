@@ -11,13 +11,16 @@ public class ParticlePixelUpdate : MonoBehaviour
     private void OnEnable()
     {
         _particleLogic.OnParticleUpdate += OnParicleUpdate;
-        _particleLogic.OnTick += OnTick;
     }
 
     private void OnDisable()
     {
         _particleLogic.OnParticleUpdate -= OnParicleUpdate;
-        _particleLogic.OnTick -= OnTick;
+    }
+
+    private void Update()
+    {
+        UpdatePixels();
     }
 
     private void OnParicleUpdate(ParticleData particleData)
@@ -25,7 +28,7 @@ public class ParticlePixelUpdate : MonoBehaviour
         _particlesToUpdate.Add(particleData);
     }
 
-    private void UpdateParticle(ParticleData particleData)
+    private void UpdateSingleParticle(ParticleData particleData)
     {
         if (particleData.IsEmpty())
         {
@@ -37,14 +40,14 @@ public class ParticlePixelUpdate : MonoBehaviour
         _particleLogic.ParticleRenderer.SetPixelColor(particleData.ParticlePosition, particleData.ParticleColor);
     }
 
-    private void OnTick()
+    private void UpdatePixels()
     {
         if (_particlesToUpdate.Count <= 0)
             return;
 
         foreach (ParticleData particleData in _particlesToUpdate)
         {
-            UpdateParticle(particleData);
+            UpdateSingleParticle(particleData);
         }
 
         _particleLogic.ParticleRenderer.ApplyPixelChanges();

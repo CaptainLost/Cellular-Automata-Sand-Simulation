@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   <ParticleName>k__BackingField: Water
-  <ParticleCategory>k__BackingField: 1
+  <ParticleCategory>k__BackingField: 2
   <ParticleColor>k__BackingField:
   - {r: 0, g: 0.54694045, b: 0.8773585, a: 1}
+  - {r: 0, g: 0.5130148, b: 0.83, a: 1}
   <ParticleBehaviour>k__BackingField: {fileID: 11400000, guid: 4f6809c4fbdeeb445b1a5891dc59b52a, type: 2}
+  <IsFlammable>k__BackingField: 0

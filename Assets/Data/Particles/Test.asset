@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   <ParticleName>k__BackingField: Gravel
-  <ParticleCategory>k__BackingField: 0
+  <ParticleCategory>k__BackingField: 1
   <ParticleColor>k__BackingField:
   - {r: 0.8396226, g: 0.17030083, b: 0.17030083, a: 1}
   <ParticleBehaviour>k__BackingField: {fileID: 11400000, guid: 382f11bcfd2c9224c8bfc3611039e51c, type: 2}
+  <IsFlammable>k__BackingField: 0

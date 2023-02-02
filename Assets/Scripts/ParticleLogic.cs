@@ -7,12 +7,12 @@ public class ParticleLogic : MonoBehaviour
     [field: SerializeField] public ParticleRenderer ParticleRenderer { get; private set; }
 
     [SerializeField] private float _updateTime;
-    [SerializeField] private bool _isSimulationRunning;
+    public bool IsSimulationRunning;
 
     public ParticleStorage ParticleStorage { get; private set; }
 
     public Action<ParticleData> OnParticleUpdate;
-    public Action OnTick;
+    public Action<int> OnTick;
 
     private IEnumerator _updateCoroutine;
 
@@ -36,14 +36,14 @@ public class ParticleLogic : MonoBehaviour
         {
             yield return new WaitForSeconds(_updateTime);
 
-            if (_isSimulationRunning)
+            if (IsSimulationRunning)
             {
                 ParticleStorage.IncrementTick();
 
                 ApplyLogic();
-            }
 
-            OnTick?.Invoke();
+                OnTick?.Invoke(ParticleStorage.CurrentTick);
+            }
         }
     }
 

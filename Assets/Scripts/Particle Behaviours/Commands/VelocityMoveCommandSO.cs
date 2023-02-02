@@ -18,7 +18,7 @@ public class VelocityMoveCommandSO : ParticleCommandSO
         int yMoveAbs = Mathf.Abs(_testVelocity.y);
 
         float slope = yMoveAbs / (float)xMoveAbs;
-        Debug.Log($"Slope {slope}");
+        //Debug.Log($"Slope {slope}");
 
         ParticleData finalData = null;
 
@@ -35,7 +35,7 @@ public class VelocityMoveCommandSO : ParticleCommandSO
 
                 finalData = targetData;
 
-                Debug.Log($"New pos {x} {y}");
+                //Debug.Log($"New pos {x} {y}");
             }
         }
 

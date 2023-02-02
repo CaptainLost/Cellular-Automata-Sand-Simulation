@@ -10,7 +10,7 @@ public class ParticleRenderer : MonoBehaviour
     [field: SerializeField] public Vector2Int SimulationSize { get; private set; }
     [field: SerializeField] public int PixelPerUnit { get; private set; }
 
-    private Texture2D _texture;
+    public Texture2D Texture { get; private set; }
 
     private void Awake()
     {
@@ -20,16 +20,16 @@ public class ParticleRenderer : MonoBehaviour
 
     private void CreateTexture()
     {
-        _texture = new Texture2D(SimulationSize.x, SimulationSize.y);
-        _texture.filterMode = FilterMode.Point;
+        Texture = new Texture2D(SimulationSize.x, SimulationSize.y);
+        Texture.filterMode = FilterMode.Point;
 
-        Sprite sprite = Sprite.Create(_texture, new Rect(0, 0, SimulationSize.x, SimulationSize.y), new Vector2(0.5f, 0.5f), PixelPerUnit);
+        Sprite sprite = Sprite.Create(Texture, new Rect(0, 0, SimulationSize.x, SimulationSize.y), new Vector2(0.5f, 0.5f), PixelPerUnit);
         _spriteRenderer.sprite = sprite;
     }
 
     public void SetPixelColor(int x, int y, Color color)
     {
-        _texture.SetPixel(x, y, color);
+        Texture.SetPixel(x, y, color);
     }
 
     public void SetPixelColor(Vector2Int pos, Color color)
@@ -39,17 +39,17 @@ public class ParticleRenderer : MonoBehaviour
 
     public void SetEmptySpace(int x, int y)
     {
-        _texture.SetPixel(x, y, _emptySpaceColor);
+        Texture.SetPixel(x, y, _emptySpaceColor);
     }
 
     public void SetEmptySpace(Vector2Int pos)
     {
-        _texture.SetPixel(pos.x, pos.y, _emptySpaceColor);
+        Texture.SetPixel(pos.x, pos.y, _emptySpaceColor);
     }
 
     public void ApplyPixelChanges()
     {
-        _texture.Apply();
+        Texture.Apply();
     }
 
     public void ClearSpace()
